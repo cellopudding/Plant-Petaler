@@ -2,7 +2,7 @@ export const PRODUCTS = [
   {
     id: 1,
     name: "Tin of Cookies",
-    description: "Class aptent taciti sociosqu ad litora torquent per.",
+    description: "Class aptent taciti sociosqu ad litora.",
     image: "plant.jpg",
     price: 2.99,
     quantity: 500,
@@ -10,7 +10,7 @@ export const PRODUCTS = [
   {
     id: 2,
     name: "Canned Coffee",
-    description: "Praesent sed lacinia mauris. Nulla congue nibh magna.",
+    description: "Praesent sed lacinia mauris.",
     image: "flowers.jpg",
     price: 1.99,
     quantity: 500,

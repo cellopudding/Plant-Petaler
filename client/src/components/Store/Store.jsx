@@ -6,8 +6,12 @@ import "./store.css";
 function Store() {
   return (
     <div className="store">
-      <div className="storeTitle">
-        <h1>All Plants</h1>
+      <div className="store-menu">
+        <h2>All Plants</h2>
+        <h2>Indoor</h2>
+        <h2>Outdoor</h2>
+        <h2>Edible</h2>
+        <h2>Poisonous</h2>
       </div>
       <div className="product-container">
         {""}

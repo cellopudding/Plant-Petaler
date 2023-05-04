@@ -18,6 +18,8 @@ function App() {
           <Route path="/cart" element={<Cart />} />
           {/* login page */}
           {/* <Route path="/login" /> */}
+          {/* the specific product info page */}
+          {/* <Route path="/product" element={<Item/>} /> */}
         </Routes>
       </Router>
     </div>

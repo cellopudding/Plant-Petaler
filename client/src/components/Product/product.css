@@ -1,1 +1,33 @@
+/* .card-container {
+  display: flex;
+  flex: 0 1 30%;
+  padding: 2rem 1rem;
+  display: flex;
+  align-items: center;
+} */
 
+.card {
+  width: 30%;
+  /* align-items: center; */
+  /* justify-content: center; */
+  display: flex;
+}
+
+.item {
+  align-items: center;
+ 
+}
+
+button {
+  background-color: #83b692;
+  border: #83b692;
+  border-radius: 4px;
+  color: #fff;
+  padding: 0.5rem;
+  width: max-content;
+}
+
+.name{
+  font-weight: bold;
+  font-size: 20px;
+}

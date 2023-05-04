@@ -5,11 +5,11 @@ import "./store.css";
 
 function Store() {
   return (
-    <div className="'shop">
-      <div className="shopTitle">
+    <div className="store">
+      <div className="storeTitle">
         <h1>All Plants</h1>
       </div>
-      <div className="products">
+      <div className="product-container">
         {""}
         {PRODUCTS.map((product) => (
           <Product data={product} key={product.id} />

@@ -5,13 +5,17 @@ export const Product = (props) => {
   const { name, description, price, image, quantity } = props.data;
   return (
     <div className="card">
-      <h1>{name}</h1>
-      <img src={image} alt="plant" />
-      <p>{description}</p>
-      <p>${price}</p>
-      <p>{quantity}</p>
-
-      <button>Add to cart</button>
+      <div className="item">
+        <img src={image} alt="plant" />
+        <p className="name">{name}</p>
+        <p>{description}</p>
+        <p>${price}</p>
+        <p>{quantity}</p>
+        <p>
+          <a href="./cart">More info</a>
+        </p>
+        <button>Add to cart</button>
+      </div>
     </div>
   );
 };

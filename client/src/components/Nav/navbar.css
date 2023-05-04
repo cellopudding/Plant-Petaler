@@ -3,8 +3,8 @@
   height: 80px;
   background-color: #83b692;
   display: flex;
-  justify-content: flex-end;
   align-items: center;
+  justify-content: center;
 }
 
 .links {

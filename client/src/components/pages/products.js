@@ -23,4 +23,12 @@ export const PRODUCTS = [
     price: 7.99,
     quantity: 20,
   },
+  {
+    id: 4,
+    name: "New Item",
+    description: "Donec volutpat erat erat, sit amet.",
+    image: "cactus.jpg",
+    price: 7.99,
+    quantity: 20,
+  },
 ];

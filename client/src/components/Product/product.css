@@ -1,0 +1,30 @@
+.card {
+  display: flex;
+  width: 30%;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  background-color: #83b692;
+  border: #83b692;
+  border-radius: 4px;
+  color: #fff;
+  padding: 0.5rem;
+  width: max-content;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.name {
+  font-weight: bold;
+  font-size: 20px;
+}

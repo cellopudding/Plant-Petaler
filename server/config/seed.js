@@ -45,7 +45,7 @@ db.once('open', async () => {
     
     {
       name: 'Sunset Huskmallow',
-      category: [categories[1]._id, categories[2]._id],
+      category: categories[1]._id,
       description:'This small, ornamental accent tree is quite uncommon and offers something for all seasons. In late spring, it produces drooping panicles of urn-shaped flowers, followed by similar seeds. In the fall, the tree provides a brilliant red color, along with a very distinctive habit. However, keep in mind that it requires very specific growing conditions.',
       image: 'sunset-huskmallow.png',
       price: 7.99,
@@ -77,7 +77,7 @@ db.once('open', async () => {
     password: 'password12345',
     orders: [
       {
-        products: [products[1]._id, products[4]._id],
+        products: [products[1]._id, products[3]._id],
       }
     ]
   });

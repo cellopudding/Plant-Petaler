@@ -1,3 +1,4 @@
+/*
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
@@ -30,3 +31,4 @@ const WeatherComponent = () => {
 };
 
 export default WeatherComponent;
+*/

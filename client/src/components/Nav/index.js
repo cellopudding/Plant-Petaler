@@ -1,11 +1,11 @@
 import React from "react";
 import Auth from "../../utils/auth";
 import { Link } from "react-router-dom";
-import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 
-import "./navbar.css";
+// import "./navbar.css";
 
 function Nav() {
   function showNavigation() {
@@ -13,25 +13,28 @@ function Nav() {
       return (
         <div className="navbar">
           <div className="left">
-            <Link to="/orderHistory">Order History</Link>
-            <li>
-              {/* this is not using the Link component to logout or user and then refresh the application to the start */}
-              <a href="/" onClick={() => Auth.logout()}>
-                Logout
-              </a>
-            </li>
+            <Link to="/" className="name">
+              Plants
+            </Link>
           </div>
           <div className="right">
             <div className="icons">
-              <Link to="/login">
-                <AccountCircleIcon />
-              </Link>
-              <Link to="/cart">
-                <FavoriteIcon />
-              </Link>
-              <Link to="/cart">
-                <ShoppingCartIcon />
-              </Link>
+              <ul>
+                <li>
+                  <Link to="/orderHistory">Order History</Link>
+                </li>
+                <li>
+                  <Link to="/cart">
+                    <FavoriteIcon />
+                  </Link>
+                </li>
+                <li>
+                  {/* this is not using the Link component to logout or user and then refresh the application to the start */}
+                  <a href="/" onClick={() => Auth.logout()}>
+                    Logout
+                  </a>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
@@ -46,18 +49,18 @@ function Nav() {
           </div>
           <div className="right">
             <div className="icons">
-              <Link to="/login">
-                <AccountCircleIcon />
-              </Link>
-              <Link to="/signup" className="signup">
-                Sign up
-              </Link>
-              <Link to="/cart">
-                <FavoriteIcon />
-              </Link>
-              <Link to="/cart">
-                <ShoppingCartIcon />
-              </Link>
+              <ul>
+                <li>
+                  <Link to="/login">
+                    <AccountCircleIcon />
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/signup" className="signup">
+                    Sign up
+                  </Link>
+                </li>
+              </ul>
             </div>
           </div>
         </div>

@@ -23,9 +23,16 @@
   }
 }
 
+.right {
+  flex: 0.3;
+}
+
 ul {
   display: flex;
   justify-content: space-around;
+  list-style: none;
+  align-items: center;
+  gap: 1rem;
 }
 
 a {
@@ -33,15 +40,10 @@ a {
   color: white;
 }
 
-.right {
-  flex: 0.3;
-}
-
 .icons {
   display: flex;
   justify-content: center;
-  gap: 1rem;
-  font-size: 40px;
+  font-size: 16px;
 }
 
 .signup {

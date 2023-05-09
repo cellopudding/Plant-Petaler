@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 
-// import "./navbar.css";
+import "./navbar.css";
 
 function Nav() {
   function showNavigation() {
@@ -53,11 +53,6 @@ function Nav() {
                 <li>
                   <Link to="/login">
                     <AccountCircleIcon />
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/signup" className="signup">
-                    Sign up
                   </Link>
                 </li>
               </ul>

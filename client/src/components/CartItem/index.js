@@ -2,6 +2,7 @@ import React from "react";
 import { useStoreContext } from "../../utils/GlobalState";
 import { REMOVE_FROM_CART, UPDATE_CART_QUANTITY } from "../../utils/actions";
 import { idbPromise } from "../../utils/helpers";
+import CloseIcon from "@mui/icons-material/Close";
 
 const CartItem = ({ item }) => {
   const [, dispatch] = useStoreContext();
@@ -41,7 +42,7 @@ const CartItem = ({ item }) => {
         <div>
           {item.name}, ${item.price}
         </div>
-        <div>
+        <div className="card-qty">
           <span>Qty:</span>
           <input
             type="number"
@@ -54,7 +55,7 @@ const CartItem = ({ item }) => {
             aria-label="trash"
             onClick={() => removeFromCart(item)}
           >
-            🗑️
+            <CloseIcon />
           </span>
         </div>
       </div>

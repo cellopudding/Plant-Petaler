@@ -1,17 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
 
-const WeatherComponent = () => {
-  const [weatherData, setWeatherData] = useState(null);
+const PlantComponents = () => {
+  const [plantData, setPlantData] = useState(null);
 
   useEffect(() => {
-    axios.get('https://api.example.com/weather', {
+    axios.get('https://perenual.com/api/species-list?page=1&key=sk-bjsu645066e2a29ee716', {
       params: {
-        city: 'New York',
-        apiKey: 'your_api_key_here'
+        Key: 'sk-bjsu645066e2a29ee716'
       }
     }).then(response => {
-      setWeatherData(response.data);
+      setPlantData(response.data);
     }).catch(error => {
       console.log(error);
     });
@@ -19,14 +17,13 @@ const WeatherComponent = () => {
 
   return (
     <div>
-      {weatherData && (
+      {plantData && (
         <div>
-          <h2>{weatherData.city}</h2>
-          <p>{weatherData.temperature}</p>
+          <h2>{plantData.common_name}</h2>
         </div>
       )}
     </div>
   );
 };
 
-export default WeatherComponent;
+export default PlantComponents;

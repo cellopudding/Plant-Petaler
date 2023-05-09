@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 
-import "./navbar.css";
+// import "./navbar.css";
 
 function Nav() {
   function showNavigation() {
@@ -13,9 +13,23 @@ function Nav() {
       return (
         <div className="navbar">
           <div className="left">
-            <Link to="/" className="name">
-              Plants
-            </Link>
+            <ul>
+              <li>
+                <Link to="/" className="name">
+                  Indoor
+                </Link>
+              </li>
+              <li>
+                <Link to="/" className="name">
+                  Outdoor
+                </Link>
+              </li>
+              <li>
+                <Link to="/" className="name">
+                  Plants
+                </Link>
+              </li>
+            </ul>
           </div>
           <div className="right">
             <div className="icons">

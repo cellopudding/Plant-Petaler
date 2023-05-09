@@ -88,32 +88,27 @@ function Detail() {
           <Link to="/" className="back">
             ← Back to Products
           </Link>
-
-          <h2>{currentProduct.name}</h2>
-
-          <p>{currentProduct.description}</p>
-
-          <p>
-            <strong>Price:</strong>${currentProduct.price}{" "}
-            <button onClick={addToCart} className="addCartBtn">
-              Add to Cart
-            </button>
-            <button
-              disabled={!cart.find((p) => p._id === currentProduct._id)}
-              onClick={removeFromCart}
-              className="addCartBtn"
-            >
-              Remove from Cart
-            </button>
-          </p>
-
-          <img
-            src={`/images/${currentProduct.image}`}
-            alt={currentProduct.name}
-          />
+          <img src={`${currentProduct.image}`} alt={currentProduct.name} />
         </div>
       ) : null}
       {loading ? <img src={spinner} alt="loading" /> : null}
+      <h2>{currentProduct.name}</h2>
+      <h4>Description</h4>
+      <p>{currentProduct.description}</p>
+      <p>
+        <strong>Price:</strong>${currentProduct.price}{" "}
+        <button onClick={addToCart} className="addCartBtn">
+          Add to Cart
+        </button>
+        <button
+          disabled={!cart.find((p) => p._id === currentProduct._id)}
+          onClick={removeFromCart}
+          className="addCartBtn"
+        >
+          Remove from Cart
+        </button>
+      </p>
+
       <Cart />
     </>
   );

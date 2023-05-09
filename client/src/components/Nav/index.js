@@ -11,73 +11,74 @@ function Nav() {
   function showNavigation() {
     if (Auth.loggedIn()) {
       return (
-        <div className="navbar">
-          <div className="left">
-            <ul>
-              <li>
-                <Link to="/" className="name">
-                  Indoor
-                </Link>
-              </li>
-              <li>
-                <Link to="/" className="name">
-                  Outdoor
-                </Link>
-              </li>
-              <li>
-                <Link to="/" className="name">
-                  Plants
-                </Link>
-              </li>
-            </ul>
-          </div>
-          <div className="right">
+        // <div className="navbar">
+        //   <div className="left">
+        <ul className="flex-row">
+          <li className="mx-1">
+            <Link to="/" className="name">
+              Indoor
+            </Link>
+          </li>
+          <li className="mx-1">
+            <Link to="/" className="name">
+              Outdoor
+            </Link>
+          </li>
+
+          {/* </ul> */}
+          {/* // </div> */}
+          {/* <div className="right">
             <div className="icons">
-              <ul>
-                <li>
-                  <Link to="/orderHistory">Order History</Link>
-                </li>
-                <li>
-                  <Link to="/cart">
-                    <FavoriteIcon />
-                  </Link>
-                </li>
-                <li>
-                  {/* this is not using the Link component to logout or user and then refresh the application to the start */}
-                  <a href="/" onClick={() => Auth.logout()}>
-                    Logout
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
+              <ul> */}
+          <li className="mx-1">
+            <Link to="/orderHistory">Order History</Link>
+          </li>
+          <li className="mx-1">
+            <Link to="/cart">
+              <FavoriteIcon />
+            </Link>
+          </li>
+          <li className="mx-1">
+            {/* this is not using the Link component to logout or user and then refresh the application to the start */}
+            <a href="/" onClick={() => Auth.logout()}>
+              Logout
+            </a>
+          </li>
+        </ul>
+        //   </div>
+        // </div>
+        // </div>
       );
     } else {
       return (
-        <div className="navbar">
-          <div className="left">
-            <Link to="/" className="name">
-              Plants
-            </Link>
-          </div>
+        // <div className="navbar">
+        //   <div className="left">
+        <ul className="flex-row">
+          {/* </div>
           <div className="right">
-            <div className="icons">
-              <ul>
-                <li>
-                  <Link to="/login">
-                    <AccountCircleIcon />
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
+            <div className="icons"> */}
+
+          <li className="mx-1">
+            <Link to="/login">
+              <AccountCircleIcon />
+            </Link>
+          </li>
+        </ul>
+        //     </div>
+        //   </div>
+        // </div>
       );
     }
   }
   return (
-    <nav>{showNavigation()}</nav>
+    <header className="flex-row px-1">
+      <h1>
+        <Link to="/">
+          Plant Shop
+        </Link>
+      </h1>
+      <nav>{showNavigation()}</nav>
+    </header>
     // <div className="navbar">
     //   <div className="left">
     //     <Link to="/" className="name">

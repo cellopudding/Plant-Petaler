@@ -1,0 +1,24 @@
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 5%;
+}
+
+.icons {
+    display: flex;
+    flex-direction: row;
+}
+
+.icons a img {
+    height: 25px;
+    margin: 5px;
+}
+
+.tech-used {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+

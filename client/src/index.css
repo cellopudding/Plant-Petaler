@@ -1,55 +1,13 @@
-/* body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
-
-.signup {
-  color: #83b692;
-  font-weight: bolder;
-}
-
-form {
-  width: 40%;
-}
-
-input {
-  font-size: 1rem;
-  padding: 0.25rem;
-  border: 1px solid black;
-  outline: none;
-  border-radius: 3px;
-  transition: box-shadow 0.2s;
-}
-
-input:focus {
-  border: 1px solid black;
-  box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.5);
-}
-
-@media screen and (max-width: 768px) {
-  .card {
-    width: 100%;
-  }
-} */
-
 :root {
-  --primary: #232F3E;
-  --secondary: #F3A847;
-  --tertiary: #B12704;
+  --primary: #83b692;
+  /* --secondary: black; */
+  --tertiary: #b12704;
   --light: #fafafa;
-  --dark: #272f32;
+  --dark: #353535;
   --error: rgb(228, 46, 1);
   --spacing-one: calc(1rem * 0.5);
   --spacing-two: calc(1rem);
+  --spacing-three: calc(1.5rem);
 }
 
 * {
@@ -64,7 +22,7 @@ body {
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Karla', sans-serif;
+  font-family: "Karla", sans-serif;
   font-weight: 400;
   line-height: 1.5;
   font-size: 16px;
@@ -77,7 +35,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
   font-weight: 500;
   margin: 5px 0;
   line-height: 1.25;
@@ -113,13 +71,9 @@ p {
 }
 
 a {
-  color: var(--tertiary);
+  color: var(--dark);
   text-decoration: none;
   font-weight: bold;
-}
-
-a:hover {
-  text-decoration: underline;
 }
 
 header {
@@ -134,25 +88,30 @@ button {
   font-size: 1rem;
   text-decoration: none;
   padding: 0.25rem 1rem;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   border: none;
   outline: none;
   cursor: pointer;
   margin: 0 1px;
-  background-color: var(--secondary);
+  background-color: var(--primary);
+  color: var(--light);
 }
 
 button:hover {
-  opacity: .8;
+  opacity: 0.8;
 }
 
 button[disabled] {
   cursor: default;
-  opacity: .8;
+  opacity: 0.8;
 }
 
+/* need to fix */
 img {
   max-width: 100%;
+  object-fit: cover;
+  width: 300px;
+  height: 300px;
 }
 
 span[role="img"] {
@@ -173,12 +132,12 @@ input {
 }
 
 input:focus {
-  border: 1px solid var(--secondary);
-  box-shadow: 0 0 .25rem rgba(0, 0, 0, .5);
+  border: 1px solid var(--primary);
+  box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.5);
 }
 
 .container {
-  width: 85%;
+  /* width: 85%; */
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
@@ -210,6 +169,8 @@ input:focus {
 .my-1 {
   margin-top: var(--spacing-one);
   margin-bottom: var(--spacing-one);
+  display: flex;
+  flex-direction: column;
 }
 
 .my-2 {
@@ -227,6 +188,11 @@ input:focus {
   padding-left: var(--spacing-two);
 }
 
+.px-3 {
+  padding-right: var(--spacing-three);
+  padding-left: var(--spacing-three);
+}
+
 .py-1 {
   padding-top: var(--spacing-one);
   padding-bottom: var(--spacing-one);
@@ -235,6 +201,11 @@ input:focus {
 .py-2 {
   padding-top: var(--spacing-two);
   padding-bottom: var(--spacing-two);
+}
+
+.py-3 {
+  padding-top: var(--spacing-three);
+  padding-bottom: var(--spacing-three);
 }
 
 .card {
@@ -246,9 +217,12 @@ input:focus {
   color: var(--error);
 }
 
+ul {
+  list-style: none;
+}
+
 @media screen and (max-width: 768px) {
   .card {
     width: 100%;
   }
 }
-

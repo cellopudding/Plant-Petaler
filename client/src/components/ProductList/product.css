@@ -1,4 +1,4 @@
-.card {
+/* .card {
   display: flex;
   width: 30%;
   align-items: center;
@@ -42,7 +42,7 @@
   color: white;
   font-size: 16px;
   padding: 16px 32px;
-}
+} */
 
 /* .text {
   color: white;
@@ -56,7 +56,7 @@
   text-align: center;
 } */
 
-.addCartBtn {
+/* .addCartBtn {
   background-color: #83b692;
   border: #83b692;
   border-radius: 4px;
@@ -102,4 +102,4 @@
   margin-left: 100px;
   margin-right: 100px;
   margin-bottom: 50px;
-}
+} */

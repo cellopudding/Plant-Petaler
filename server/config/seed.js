@@ -62,7 +62,7 @@ db.once("open", async () => {
     {
       name: "Crimson Prince Japanese Maple",
       description:
-        "An improved selection of the popular Bloodgood maple with richer red foliage that is more resistant to heat scorch so it tends to perform better in hot sun; dazzling fall color; a medium-sized accent tree for the smaller home landscape",
+        "An improved selection of the popular Bloodgood maple with richer red foliage that is more resistant to heat scorch so it tends to perform better in hot sun; dazzling fall color; a medium-sized accent tree for the smaller home landscape.",
       image:
         "https://perenual.com/storage/species_image/52_acer_palmatum_crimson_prince/og/1-1274349109Jjby.jpg",
       watering: "Frequent",

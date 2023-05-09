@@ -35,10 +35,15 @@ function ProductItem(item) {
 
   return (
     <div className="card px-3 py-3">
+      <div className="wrapper">
       <Link to={`/products/${_id}`}>
-        <img alt={name} src={`${image}`} />
+        <img alt={name} src={`${image}`} className="image" />
+        <div className="overlay">
+          <div className="text">Details</div>
+        </div>
         <p>{name}</p>
       </Link>
+      </div>
       <div>
         <div>
           {quantity} {pluralize("item", quantity)} in stock

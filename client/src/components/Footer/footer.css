@@ -19,7 +19,7 @@ footer p {
     flex-direction: row;
 }
 
-.icons a img {
+.footer-icon {
     height: 30px;
     margin-inline: 5px;
 }

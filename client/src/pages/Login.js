@@ -30,44 +30,52 @@ function Login(props) {
   };
 
   return (
-    <div className="container my-1">
-      <p>Don't have an account?</p>
-      <Link to="/signup" className="signup">
-        Sign up.
-      </Link>
-      <h2>Log in</h2>
-      <form onSubmit={handleFormSubmit}>
-        <div className="flex-row space-between my-2">
-          <label htmlFor="email">Email address:</label>
-          <input
-            placeholder="youremail@test.com"
-            name="email"
-            type="email"
-            id="email"
-            onChange={handleChange}
-          />
-        </div>
-        <div className="flex-row space-between my-2">
-          <label htmlFor="pwd">Password:</label>
-          <input
-            placeholder="******"
-            name="password"
-            type="password"
-            id="pwd"
-            onChange={handleChange}
-          />
-        </div>
-        {error ? (
-          <div>
-            <p className="error-text">The provided credentials are incorrect</p>
+    <div className="container my-1 background">
+      <div>
+        <p>
+          <Link to="/signup">
+            Don't have an account? <span className="green">Sign up.</span>
+          </Link>
+        </p>
+        <h2>Log in</h2>
+        <form onSubmit={handleFormSubmit}>
+          <div className="flex-row space-between my-2">
+            <label htmlFor="email">Email address:</label>
+            <input
+              placeholder="youremail@test.com"
+              name="email"
+              type="email"
+              id="email"
+              onChange={handleChange}
+            />
           </div>
-        ) : null}
-        <div className="flex-row flex-end">
-          <button type="submit" className="addCartBtn">
-            Log in
-          </button>
-        </div>
-      </form>
+          <div className="flex-row space-between my-2">
+            <label htmlFor="pwd">Password:</label>
+            <input
+              placeholder="******"
+              name="password"
+              type="password"
+              id="pwd"
+              onChange={handleChange}
+            />
+          </div>
+          {error ? (
+            <div>
+              <p className="error-text">
+                The provided credentials are incorrect
+              </p>
+            </div>
+          ) : null}
+          <div className="flex-row flex-end">
+            <button type="submit" className="addCartBtn">
+              Log in
+            </button>
+          </div>
+        </form>
+      </div>
+      <div className="login-image">
+        <img src="./login.jpg"></img>
+      </div>
     </div>
   );
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import ProductList from "../components/ProductList";
 import CategoryMenu from "../components/CategoryMenu";
-import Cart from "../components/Cart";
+// import Cart from "../components/Cart";
 // import Slider from "../components/Slider/Slider";
 import "../components/ProductList/product.css";
 
@@ -11,7 +11,7 @@ const Home = () => {
       <CategoryMenu />
       {/* <Slider /> */}
       <ProductList />
-      <Cart />
+      {/* <Cart /> */}
     </div>
   );
 };

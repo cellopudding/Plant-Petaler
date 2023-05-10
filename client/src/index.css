@@ -1,7 +1,6 @@
 :root {
   --primary: #83b692;
   --secondary: #3a6246;
-  --tertiary: #b12704;
   --light: #fafafa;
   --dark: #353535;
   --spacing-one: calc(1rem * 0.5);
@@ -83,6 +82,7 @@ header {
   width: 100%;
   justify-content: center;
   align-items: center;
+  z-index: 2;
 }
 
 header a {
@@ -108,7 +108,7 @@ button:hover {
 
 button[disabled] {
   cursor: default;
-  opacity: 0.8;
+  opacity: 0.7;
 }
 
 .categoryBtn {
@@ -159,6 +159,10 @@ button[disabled] {
 
 span[role="img"] {
   cursor: default;
+}
+
+.green {
+  color: var(--primary);
 }
 
 form {
@@ -264,6 +268,12 @@ input:focus {
   color: var(--primary);
 }
 
+.arrows {
+  display: flex;
+  align-items: center;
+  gap: 0.5arem;
+}
+
 ul {
   list-style: none;
 }
@@ -289,6 +299,15 @@ ul {
 
 #description {
   padding-top: 0.5rem;
+}
+
+.background {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  margin-top: 4rem;
 }
 
 @media screen and (max-width: 768px) {

@@ -4,7 +4,6 @@
   --tertiary: #b12704;
   --light: #fafafa;
   --dark: #353535;
-  --error: rgb(228, 46, 1);
   --spacing-one: calc(1rem * 0.5);
   --spacing-two: calc(1rem);
   --spacing-three: calc(1.5rem);
@@ -82,6 +81,8 @@ header {
   /* position: fixed; */
   top: 0;
   width: 100%;
+  justify-content: center;
+  align-items: center;
 }
 
 header a {
@@ -91,7 +92,7 @@ header a {
 button {
   font-size: 1rem;
   text-decoration: none;
-  padding: 0.25rem 1rem;
+  padding: 0.5rem 1rem;
   border-radius: 0.5rem;
   border: none;
   outline: none;
@@ -111,7 +112,7 @@ button[disabled] {
 }
 
 .categoryBtn {
-  background-color: var(--light);
+  background-color: #fff;
   color: var(--dark);
 }
 
@@ -255,20 +256,39 @@ input:focus {
   text-align: center;
 }
 
+.card-qty {
+  align-items: center;
+}
+
 .error-text {
-  color: var(--error);
+  color: var(--primary);
 }
 
 ul {
   list-style: none;
 }
 .details-container {
-  align-items: center;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 2rem;
 }
 .details-image,
 .details-text {
-  flex: 0.5;
+  flex: 0.4;
   justify-content: center;
+}
+
+.details-image {
+  padding-top: 0.5rem;
+}
+
+#price {
+  border-bottom: #c9ddff solid;
+  padding-bottom: 0.75rem;
+}
+
+#description {
+  padding-top: 0.5rem;
 }
 
 @media screen and (max-width: 768px) {

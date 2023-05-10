@@ -85,7 +85,7 @@ function Detail() {
     <>
       {currentProduct && cart ? (
         <div className="container my-1">
-          <Link to="/" className="back">
+          <Link to="/" className="my-2">
             ← Back to Plants
           </Link>
           <div className="flex-row details-container">
@@ -96,10 +96,9 @@ function Detail() {
             </div>
             <div className="details-text">
               <h2>{currentProduct.name}</h2>
-              <h4>Description</h4>
-              <p>{currentProduct.description}</p>
+              <h4 id="price">${currentProduct.price} </h4>
+              <p id="description">{currentProduct.description}</p>
               <p>
-                <strong>Price:</strong>${currentProduct.price}{" "}
                 <button onClick={addToCart} className="addCartBtn">
                   Add to Cart
                 </button>

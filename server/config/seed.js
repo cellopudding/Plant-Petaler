@@ -301,7 +301,7 @@ db.once("open", async () => {
       quantity: 60,
     },
     {
-      name: "Josephs Coat",
+      name: "Joseph's Coat",
       description:
         "These charming annuals dont have the most interesting or showy blooms, but they easily make up for it with their stunning, jewel-tone foliage. Josephs coat plants make a wonderful accent in any garden setting and can work well as showy houseplants. With several hundred species available, these plants offer many different leaf shapes, sizes, and textures. Plant them in full sun for the best and brightest foliage colors.",
       image:

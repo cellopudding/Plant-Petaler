@@ -10,6 +10,7 @@
   padding: 0.5rem;
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
   border-bottom-left-radius: 0.5rem;
+  z-index: 2;
 }
 
 .cart h2 {
@@ -44,7 +45,7 @@
 
 .cart img {
   width: 70px;
-  height: auto;
+  height: 70px;
   object-fit: cover;
   margin-right: 1rem;
 }

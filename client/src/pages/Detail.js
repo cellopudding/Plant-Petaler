@@ -13,6 +13,7 @@ import {
 import { QUERY_PRODUCTS } from "../utils/queries";
 import { idbPromise } from "../utils/helpers";
 import spinner from "../assets/spinner.gif";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 
 function Detail() {
   const [state, dispatch] = useStoreContext();
@@ -85,9 +86,10 @@ function Detail() {
     <>
       {currentProduct && cart ? (
         <div className="container my-1">
-          <Link to="/" className="my-2">
-            ← Back to Plants
+          <Link to="/" className="my-2 arrows">
+            <ArrowBackIcon /> Back to Plants
           </Link>
+
           <div className="flex-row details-container">
             <div className="details-image">
               <img src={`${currentProduct.image}`} alt={currentProduct.name} />

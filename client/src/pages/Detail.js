@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { useQuery } from "@apollo/client";
-
 import Cart from "../components/Cart";
 import { useStoreContext } from "../utils/GlobalState";
 import {
@@ -14,17 +13,12 @@ import { QUERY_PRODUCTS } from "../utils/queries";
 import { idbPromise } from "../utils/helpers";
 import spinner from "../assets/spinner.gif";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
-
 function Detail() {
   const [state, dispatch] = useStoreContext();
   const { id } = useParams();
-
   const [currentProduct, setCurrentProduct] = useState({});
-
   const { loading, data } = useQuery(QUERY_PRODUCTS);
-
   const { products, cart } = state;
-
   useEffect(() => {
     // already in global store
     if (products.length) {
@@ -36,7 +30,6 @@ function Detail() {
         type: UPDATE_PRODUCTS,
         products: data.products,
       });
-
       data.products.forEach((product) => {
         idbPromise("products", "put", product);
       });
@@ -51,7 +44,6 @@ function Detail() {
       });
     }
   }, [products, data, loading, dispatch, id]);
-
   const addToCart = () => {
     const itemInCart = cart.find((cartItem) => cartItem._id === id);
     if (itemInCart) {
@@ -72,16 +64,13 @@ function Detail() {
       idbPromise("cart", "put", { ...currentProduct, purchaseQuantity: 1 });
     }
   };
-
   const removeFromCart = () => {
     dispatch({
       type: REMOVE_FROM_CART,
       _id: currentProduct._id,
     });
-
     idbPromise("cart", "delete", { ...currentProduct });
   };
-
   return (
     <>
       {currentProduct && cart ? (
@@ -89,11 +78,9 @@ function Detail() {
           <Link to="/" className="my-2 arrows">
             <ArrowBackIcon /> Back to Plants
           </Link>
-
           <div className="flex-row details-container">
             <div className="details-image">
               <img src={`${currentProduct.image}`} alt={currentProduct.name} />
-
               {loading ? <img src={spinner} alt="loading" /> : null}
             </div>
             <div className="details-text">
@@ -120,5 +107,11 @@ function Detail() {
     </>
   );
 }
-
 export default Detail;
+
+
+
+
+
+
+

@@ -7,7 +7,7 @@ import { QUERY_PRODUCTS } from "../../utils/queries";
 import { idbPromise } from "../../utils/helpers";
 import spinner from "../../assets/spinner.gif";
 
-import "./product.css";
+// import "./product.css";
 
 function ProductList() {
   const [state, dispatch] = useStoreContext();
@@ -48,7 +48,7 @@ function ProductList() {
   return (
     <div className="my-2">
       {state.products.length ? (
-        <div className="flex-row container">
+        <div className="flex-row container" id="products">
           {filterProducts().map((product) => (
             <ProductItem
               key={product._id}

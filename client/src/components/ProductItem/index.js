@@ -34,9 +34,14 @@ function ProductItem(item) {
   };
 
   return (
-    <div className="card px-1 py-1">
+    <div className="card px-3 py-3">
       <Link to={`/products/${_id}`}>
-        <img alt={name} src={`${image}`} />
+        <div className="wrapper">
+          <img alt={name} src={`${image}`} className="image" />
+          <div className="middle">
+            <div className="text">Details</div>
+          </div>
+        </div>
         <p>{name}</p>
       </Link>
       <div>
@@ -45,9 +50,9 @@ function ProductItem(item) {
         </div>
         <span>${price}</span>
       </div>
-      <button onClick={addToCart} className="addCartBtn">
+      {/* <button onClick={addToCart} className="addCartBtn">
         Add to cart
-      </button>
+      </button> */}
     </div>
   );
 }

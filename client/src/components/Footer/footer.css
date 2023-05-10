@@ -1,9 +1,17 @@
 footer {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    margin-top: 5%;
+    margin-top: 25px;
+    background-color: #83b692;
+}
+
+footer p {
+    line-height: 1;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .icons {
@@ -12,13 +20,15 @@ footer {
 }
 
 .icons a img {
-    height: 25px;
-    margin: 5px;
+    height: 30px;
+    margin-inline: 5px;
 }
 
-.tech-used {
+.section {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
 }
 

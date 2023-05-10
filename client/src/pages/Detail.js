@@ -88,25 +88,31 @@ function Detail() {
           <Link to="/" className="back">
             ← Back to Plants
           </Link>
-          <img src={`${currentProduct.image}`} alt={currentProduct.name} />
+          <div className="flex-row details-container">
+            <div className="details-image">
+              <img src={`${currentProduct.image}`} alt={currentProduct.name} />
 
-          {loading ? <img src={spinner} alt="loading" /> : null}
-          <h2>{currentProduct.name}</h2>
-          <h4>Description</h4>
-          <p>{currentProduct.description}</p>
-          <p>
-            <strong>Price:</strong>${currentProduct.price}{" "}
-            <button onClick={addToCart} className="addCartBtn">
-              Add to Cart
-            </button>
-            <button
-              disabled={!cart.find((p) => p._id === currentProduct._id)}
-              onClick={removeFromCart}
-              className="addCartBtn"
-            >
-              Remove from Cart
-            </button>
-          </p>
+              {loading ? <img src={spinner} alt="loading" /> : null}
+            </div>
+            <div className="details-text">
+              <h2>{currentProduct.name}</h2>
+              <h4>Description</h4>
+              <p>{currentProduct.description}</p>
+              <p>
+                <strong>Price:</strong>${currentProduct.price}{" "}
+                <button onClick={addToCart} className="addCartBtn">
+                  Add to Cart
+                </button>
+                <button
+                  disabled={!cart.find((p) => p._id === currentProduct._id)}
+                  onClick={removeFromCart}
+                  className="addCartBtn"
+                >
+                  Remove from Cart
+                </button>
+              </p>
+            </div>
+          </div>
         </div>
       ) : null}
       <Cart />

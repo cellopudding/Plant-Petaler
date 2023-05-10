@@ -1,6 +1,6 @@
 :root {
   --primary: #83b692;
-  /* --secondary: black; */
+  --secondary: #3a6246;
   --tertiary: #b12704;
   --light: #fafafa;
   --dark: #353535;
@@ -27,6 +27,7 @@ body {
   line-height: 1.5;
   font-size: 16px;
   color: var(--dark);
+  width: 100%;
 }
 
 h1,
@@ -78,6 +79,9 @@ a {
 
 header {
   background: var(--primary);
+  /* position: fixed; */
+  top: 0;
+  width: 100%;
 }
 
 header a {
@@ -104,6 +108,11 @@ button:hover {
 button[disabled] {
   cursor: default;
   opacity: 0.8;
+}
+
+.categoryBtn {
+  background-color: var(--light);
+  color: var(--dark);
 }
 
 .wrapper {
@@ -144,7 +153,7 @@ img {
   background-color: var(--primary);
   color: var(--light);
   font-size: 16px;
-  padding: 16px 50px;
+  padding: 16px 60px;
 }
 
 span[role="img"] {
@@ -253,9 +262,20 @@ input:focus {
 ul {
   list-style: none;
 }
+.details-container {
+  align-items: center;
+}
+.details-image,
+.details-text {
+  flex: 0.5;
+  justify-content: center;
+}
 
 @media screen and (max-width: 768px) {
   .card {
     width: 100%;
+  }
+  .details-container {
+    flex-direction: column;
   }
 }

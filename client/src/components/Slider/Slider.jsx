@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 import EastOutlinedIcon from "@mui/icons-material/EastOutlined";
 import WestOutlinedIcon from "@mui/icons-material/WestOutlined";
-// import "./slider.css";
+import "./slider.css";
 
 const Slider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const data = [
-    "https://images.pexels.com/photos/1549200/pexels-photo-1549200.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    "https://images.pexels.com/photos/949670/pexels-photo-949670.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    "https://images.pexels.com/photos/837140/pexels-photo-837140.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    "https://perenual.com/storage/species_image/1199_begonia_casper/og/52423452233_02b4dc198b_b.jpg",
+    "https://perenual.com/storage/species_image/540_adenium_obesum/og/9244335137_6d662ed77c_b.jpg",
+    "https://perenual.com/storage/species_image/2272_cycas_revoluta/og/26712271676_6dc6c5fabc_b.jpg",
   ];
 
   const prevSlide = () => {
@@ -20,21 +20,22 @@ const Slider = () => {
   };
 
   return (
-    <div className="slider">
+    <div className="slider my-2">
       <div
-        className="container"
-        style={{ transform: `translateX(-${currentSlide * 100}vw)` }}
+        className="slider-container"
+        style={{ transform: `translateX(-${currentSlide * 50}vw)` }}
       >
-        <img src={data[0]} alt="" />
-        <img src={data[1]} alt="" />
-        <img src={data[2]} alt="" />
-      </div>
-      <div className="icons">
-        <div className="icon" onClick={prevSlide}>
-          <WestOutlinedIcon />
-        </div>
-        <div className="icon" onClick={nextSlide}>
-          <EastOutlinedIcon />
+        <img src={data[0]} alt="" className="slider-image" />
+        <img src={data[1]} alt="" className="slider-image" />
+        <img src={data[2]} alt="" className="slider-image" />
+
+        <div className="slider-icons">
+          <div className="arrow-icon" onClick={prevSlide}>
+            <WestOutlinedIcon />
+          </div>
+          <div className="arrow-icon" onClick={nextSlide}>
+            <EastOutlinedIcon />
+          </div>
         </div>
       </div>
     </div>

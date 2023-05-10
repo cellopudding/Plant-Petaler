@@ -65,11 +65,11 @@ const Cart = () => {
 
   if (!state.cartOpen) {
     return (
-      <div className="cart-closed" onClick={toggleCart}>
-        <span role="img" aria-label="trash" id="cart">
+      <ul className=" flex-row" onClick={toggleCart}>
+        <li className="mx-1" id="cart">
           <ShoppingCartIcon />
-        </span>
-      </div>
+        </li>
+      </ul>
     );
   }
 

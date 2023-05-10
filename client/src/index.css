@@ -264,6 +264,10 @@ input:focus {
   color: var(--primary);
 }
 
+/* .app-name{
+
+} */
+
 ul {
   list-style: none;
 }

@@ -34,7 +34,7 @@ function Signup(props) {
     <div className="container my-1">
       <p>
         <Link to="/login" className="signup">
-          Already have an account? <span>Log in.</span>
+          Already have an account? <span className="green">Log in.</span>
         </Link>
       </p>
       <h2>Sign up</h2>

@@ -161,7 +161,7 @@ span[role="img"] {
   cursor: default;
 }
 
-span {
+.green {
   color: var(--primary);
 }
 
@@ -268,13 +268,10 @@ input:focus {
   color: var(--primary);
 }
 
-/* .app-name{
-
-} */
-
 .arrows {
   display: flex;
   align-items: center;
+  gap: 0.5arem;
 }
 
 ul {

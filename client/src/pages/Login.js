@@ -33,8 +33,8 @@ function Login(props) {
     <div className="container my-1 background">
       <div>
         <p>
-          <Link to="/signup" className="signup">
-            Don't have an account? <span>Sign up.</span>
+          <Link to="/signup">
+            Don't have an account? <span className="green">Sign up.</span>
           </Link>
         </p>
         <h2>Log in</h2>
@@ -73,7 +73,7 @@ function Login(props) {
           </div>
         </form>
       </div>
-      <div>
+      <div className="login-image">
         <img src="./login.jpg"></img>
       </div>
     </div>

@@ -29,26 +29,26 @@ export default function Footer() {
         <p>Follow us:</p>
         <div className='icons'>
           <a className={animation1} onMouseEnter={() => setAnimation1('animate__animated animate__headShake animate__repeat-1')} onMouseLeave={() => setAnimation1('')}
-          target="_blank" href="*" rel="noreferrer"><img src={facebook} alt="Facebook logo" /></a>
+          target="_blank" href="*" rel="noreferrer"><img className="footer-icon" src={facebook} alt="Facebook logo" /></a>
           <a className={animation2} onMouseEnter={() => setAnimation2('animate__animated animate__headShake animate__repeat-1')} onMouseLeave={() => setAnimation2('')}
-          target="_blank" href="*" rel="noreferrer"><img src={instagram} alt="Instagram logo" /></a>
+          target="_blank" href="*" rel="noreferrer"><img className="footer-icon" src={instagram} alt="Instagram logo" /></a>
           <a className={animation3} onMouseEnter={() => setAnimation3('animate__animated animate__headShake animate__repeat-1')} onMouseLeave={() => setAnimation3('')}
-          target="_blank" href="*" rel="noreferrer"><img src={twitter} alt="Twitter logo" /></a>
+          target="_blank" href="*" rel="noreferrer"><img className="footer-icon" src={twitter} alt="Twitter logo" /></a>
         </div>
       </div>
       <div className='section'>
         <p>This project was created by Group 1 with:</p>
         <div className='icons'>
           <a className={animation4} onMouseEnter={() => setAnimation4('')} onMouseLeave={() => setAnimation4('')}
-          target="_blank" href="https://www.mongodb.com/" rel="noreferrer"><img src={mongo} alt="MongoDB logo" /></a>
+          target="_blank" href="https://www.mongodb.com/" rel="noreferrer"><img className="footer-icon" src={mongo} alt="MongoDB logo" /></a>
           <a className={animation5} onMouseEnter={() => setAnimation5('')} onMouseLeave={() => setAnimation5('')}
-          target="_blank" href="https://expressjs.com/" rel="noreferrer"><img src={express} alt="Express.js logo" /></a>
+          target="_blank" href="https://expressjs.com/" rel="noreferrer"><img className="footer-icon" src={express} alt="Express.js logo" /></a>
           <a className={animation6} onMouseEnter={() => setAnimation6('')} onMouseLeave={() => setAnimation6('')}
-          target="_blank" href="https://react.dev/" rel="noreferrer"><img src={react} alt="React logo" /></a>
+          target="_blank" href="https://react.dev/" rel="noreferrer"><img className="footer-icon" src={react} alt="React logo" /></a>
           <a className={animation7} onMouseEnter={() => setAnimation7('')} onMouseLeave={() => setAnimation7('')}
-          target="_blank" href="https://nodejs.org/en" rel="noreferrer"><img src={node} alt="Node.js logo" /></a>
+          target="_blank" href="https://nodejs.org/en" rel="noreferrer"><img className="footer-icon" src={node} alt="Node.js logo" /></a>
           <a className={animation8} onMouseEnter={() => setAnimation8('')} onMouseLeave={() => setAnimation8('')}
-          target="_blank" href="https://stripe.com/" rel="noreferrer"><img src={stripe} alt="Stripe logo" /></a>
+          target="_blank" href="https://stripe.com/" rel="noreferrer"><img className="footer-icon" src={stripe} alt="Stripe logo" /></a>
         </div>
       </div>
     </footer>

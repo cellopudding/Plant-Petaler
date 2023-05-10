@@ -121,7 +121,7 @@ button[disabled] {
 }
 
 /* need to fix */
-img {
+.image {
   max-width: 100%;
   object-fit: cover;
   width: 300px;

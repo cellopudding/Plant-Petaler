@@ -324,5 +324,6 @@ ul {
   }
   .details-container {
     flex-direction: column;
+    margin-inline: 20px;
   }
 }

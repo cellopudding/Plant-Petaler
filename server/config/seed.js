@@ -26,7 +26,7 @@ db.once("open", async () => {
       maintenance: "n/a",
       care_level: "Medium",
       category: categories[1]._id,
-      price: 3.5,
+      price: 35.99,
       quantity: 500,
     },
     {
@@ -41,7 +41,7 @@ db.once("open", async () => {
       maintenance: "n/a",
       care_level: "Medium",
       category: categories[1]._id,
-      price: 6.99,
+      price: 16.99,
       quantity: 500,
     },
     {
@@ -86,7 +86,7 @@ db.once("open", async () => {
       maintenance: "Moderate",
       care_level: "Moderate",
       category: categories[1]._id,
-      price: 79.5,
+      price: 79.99,
       quantity: 60,
     },
     {
@@ -101,7 +101,7 @@ db.once("open", async () => {
       maintenance: "Low",
       care_level: "n/a",
       category: categories[1]._id,
-      price: 49.5,
+      price: 49.99,
       quantity: 4,
     },
     {
@@ -116,7 +116,7 @@ db.once("open", async () => {
       maintenance: "Low",
       care_level: "Medium",
       category: categories[1]._id,
-      price: 26.75,
+      price: 26.99,
       quantity: 100,
     },
     {
@@ -146,7 +146,7 @@ db.once("open", async () => {
       maintenance: "Low",
       care_level: "Medium",
       category: categories[1]._id,
-      price: 46.78,
+      price: 46.99,
       quantity: 50,
     },
     {
@@ -177,7 +177,7 @@ db.once("open", async () => {
       maintenance: "n/a",
       care_level: "Medium",
       category: categories[0]._id,
-      price: 7.99,
+      price: 17.99,
       quantity: 20,
     },
     {
@@ -192,7 +192,7 @@ db.once("open", async () => {
       maintenance: "Moderate",
       care_level: "Moderate",
       category: categories[0]._id,
-      price: 16.5,
+      price: 16.99,
       quantity: 10,
     },
     {
@@ -207,7 +207,7 @@ db.once("open", async () => {
       maintenance: "Moderate",
       care_level: "Medium",
       category: categories[0]._id,
-      price: 45.67,
+      price: 45.99,
       quantity: 34,
     },
     {
@@ -267,7 +267,7 @@ db.once("open", async () => {
       maintenance: "Moderate",
       care_level: "Moderate",
       category: categories[0]._id,
-      price: 32.6,
+      price: 32.99,
       quantity: 46,
     },
     {

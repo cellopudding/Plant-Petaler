@@ -193,6 +193,10 @@ form {
   flex-direction: column;
 }
 
+label {
+  width: 150px;
+}
+
 input {
   font-size: 1rem;
   padding: 0.25rem;
@@ -200,7 +204,7 @@ input {
   outline: none;
   border-radius: 3px;
   transition: box-shadow 0.2s;
-  width: 40%;
+  width: 200px;
 }
 
 input:focus {
@@ -345,6 +349,7 @@ ul {
   text-align: center;
   margin-left: 25%;
   margin-right: 25%;
+  height: 100vh;
 }
 
 @media screen and (max-width: 992px) {

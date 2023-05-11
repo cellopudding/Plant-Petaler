@@ -39,7 +39,7 @@ const CustomModal = ({ isOpen, onRequestClose }) => {
     <Modal isOpen={isOpen} onRequestClose={onRequestClose}>
       <h2>Find Your Zone!</h2>
       <div className="inputContainer">
-        <label>Enter Your Zip Code to Find Your Growing Zone:</label>
+        <label>Enter Your Zip Code:</label>
         <input
           type="text"
           placeholder="Zip Code"
@@ -52,18 +52,18 @@ const CustomModal = ({ isOpen, onRequestClose }) => {
         <div className="zoneDisplay">
           <h3>Your Growing Zone:</h3>
           <p>
-            <strong>Zone:</strong>
+            <strong>Zone: </strong>
             {zoneResult.zone}
           </p>
           <p>
-            <strong>Temp Range:</strong> {zoneResult.temperature_range}
+            <strong>Temp Range: </strong> {zoneResult.temperature_range}
           </p>
           <p>
-            <strong>Lat:</strong>
+            <strong>Lat: </strong>
             {zoneResult.coordinates.lat}
           </p>
           <p>
-            <strong>Lon:</strong>
+            <strong>Lon: </strong>
             {zoneResult.coordinates.lon}
           </p>
         </div>

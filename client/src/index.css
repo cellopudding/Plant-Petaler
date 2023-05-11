@@ -281,6 +281,7 @@ ul {
   align-items: flex-start;
   justify-content: center;
   padding-top: 2rem;
+  gap: 2rem;
 }
 .details-image,
 .details-text {
@@ -290,6 +291,13 @@ ul {
 
 .details-image {
   padding-top: 0.5rem;
+  width: 100%;
+  height: auto;
+}
+
+#details-image {
+  width: 100%;
+  height: auto;
 }
 
 #price {

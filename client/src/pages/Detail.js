@@ -80,7 +80,7 @@ function Detail() {
           </Link>
           <div className="flex-row details-container">
             <div className="details-image">
-              <img src={`${currentProduct.image}`} alt={currentProduct.name} />
+              <img src={`${currentProduct.image}`} alt={currentProduct.name} id="details-image"/>
               {loading ? <img src={spinner} alt="loading" /> : null}
             </div>
             <div className="details-text">

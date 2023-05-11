@@ -25,11 +25,12 @@ function ProductItem(item) {
         purchaseQuantity: parseInt(itemInCart.purchaseQuantity) + 1,
       });
     } else {
+      console.log("in product item");
       dispatch({
         type: ADD_TO_CART,
         product: { ...item, purchaseQuantity: 1 },
       });
-      idbPromise("cart", "put", { ...item, purchaseQuantity: 1 });
+     idbPromise("cart", "put", { ...item, purchaseQuantity: 1 });
     }
   };
 

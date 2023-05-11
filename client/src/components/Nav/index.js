@@ -2,7 +2,7 @@ import React from "react";
 import Auth from "../../utils/auth";
 import { Link } from "react-router-dom";
 import Cart from "../Cart/index";
-import CategoryMenu from "../CategoryMenu/index";
+
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 
 // import "./navbar.css";
@@ -59,7 +59,6 @@ function Nav() {
       <h1 className="app-name">
         <Link to="/">Plant Shop</Link>
       </h1>
-      <CategoryMenu />
       <div className="flex-row">
         <nav>{showNavigation()}</nav>
         <Cart />

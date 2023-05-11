@@ -108,7 +108,7 @@ function Detail() {
                 Sun: {currentProduct.sun}{" "}
               </p>
               <p id="hardiness_zone" className="details">
-                <MapIcon style={{ color: "#333131" }} />
+                <MapIcon style={{ color: "#ff9b71" }} />
                 Hardiness Zone: {currentProduct.hardiness_zone}{" "}
               </p>
               <p id="maintenance" className="details">
@@ -119,7 +119,7 @@ function Detail() {
                 <YardIcon style={{ color: "#ae76a6" }} />
                 Care Level: {currentProduct.care_level}{" "}
               </p>
-              <p>
+              <p className="detailsBtn">
                 <button onClick={addToCart} className="addCartBtn">
                   Add to Cart
                 </button>

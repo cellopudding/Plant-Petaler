@@ -31,7 +31,7 @@ function Login(props) {
 
   return (
     <div className="container my-1">
-      <div>
+      <div className="login-form">
         <p>
           <Link to="/signup">
             Don't have an account? <span className="green">Sign up.</span>

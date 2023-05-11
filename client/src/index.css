@@ -111,10 +111,24 @@ button[disabled] {
   opacity: 0.7;
 }
 
+.detailsBtn {
+  display: flex;
+  /* justify-content: center; */
+  gap: 0.5rem;
+}
+
+.categories {
+  text-align: center;
+}
+
 .categoryBtn {
-  background-color: var(--primary);
-  color: var(--light);
+  background-color: #fff;
+  color: var(--dark);
   font-size: 1.25rem;
+}
+
+.categoryBtn:hover {
+  color: #3a6246;
 }
 
 .wrapper {
@@ -169,6 +183,9 @@ span[role="img"] {
 
 form {
   width: 40%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 input {
@@ -219,8 +236,6 @@ input:focus {
 .my-1 {
   margin-top: var(--spacing-one);
   margin-bottom: var(--spacing-one);
-  display: flex;
-  flex-direction: column;
 }
 
 .my-2 {
@@ -306,6 +321,8 @@ ul {
 
 .details {
   display: flex;
+  gap: 0.5rem;
+  padding-top: 5px;
 }
 
 #price {
@@ -324,6 +341,10 @@ ul {
   align-items: center;
   justify-content: center;
   margin-top: 4rem;
+}
+
+.login-form {
+  text-align: center;
 }
 
 @media screen and (max-width: 768px) {

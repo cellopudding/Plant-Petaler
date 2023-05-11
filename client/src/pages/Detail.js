@@ -99,23 +99,23 @@ function Detail() {
               <h2>{currentProduct.name}</h2>
               <h4 id="price">${currentProduct.price} </h4>
               <p id="description">{currentProduct.description}</p>
-              <p id="watering">
+              <p id="watering" className="details">
                 <WaterDropIcon style={{ color: "#0fa3b1" }} />
                 Watering: {currentProduct.watering}
               </p>
-              <p id="sun">
+              <p id="sun" className="details">
                 <WbSunnyIcon style={{ color: "#f5cb5c" }} />
                 Sun: {currentProduct.sun}{" "}
               </p>
-              <p id="hardiness_zone">
+              <p id="hardiness_zone" className="details">
                 <MapIcon style={{ color: "#333131" }} />
                 Hardiness Zone: {currentProduct.hardiness_zone}{" "}
               </p>
-              <p id="maintenance">
+              <p id="maintenance" className="details">
                 <HourglassBottomIcon style={{ color: "#f9627d" }} />
                 Maintenance: {currentProduct.maintenance}{" "}
               </p>
-              <p id="care_level">
+              <p id="care_level" className="details">
                 <YardIcon style={{ color: "#ae76a6" }} />
                 Care Level: {currentProduct.care_level}{" "}
               </p>

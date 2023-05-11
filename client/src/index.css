@@ -160,6 +160,7 @@ button[disabled] {
 
 span[role="img"] {
   cursor: default;
+  display: flex;
 }
 
 .green {
@@ -264,6 +265,7 @@ input:focus {
 
 .card-qty {
   align-items: center;
+  display: flex;
 }
 
 .error-text {
@@ -300,6 +302,10 @@ ul {
 #details-image {
   width: 100%;
   height: auto;
+}
+
+.details {
+  display: flex;
 }
 
 #price {

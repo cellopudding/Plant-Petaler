@@ -9,26 +9,27 @@ import {
   ADD_TO_CART,
   UPDATE_PRODUCTS,
 } from "../utils/actions";
-import CustomModal from "../components/Modal/modal";
 import { QUERY_PRODUCTS } from "../utils/queries";
 import { idbPromise } from "../utils/helpers";
 import spinner from "../assets/spinner.gif";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
-
+import WaterDropIcon from "@mui/icons-material/WaterDrop";
+import WbSunnyIcon from "@mui/icons-material/WbSunny";
+import HourglassBottomIcon from "@mui/icons-material/HourglassBottom";
+import YardIcon from "@mui/icons-material/Yard";
+import MapIcon from "@mui/icons-material/Map";
 function Detail() {
   const [state, dispatch] = useStoreContext();
   const { id } = useParams();
   const [currentProduct, setCurrentProduct] = useState({});
   const { loading, data } = useQuery(QUERY_PRODUCTS);
   const { products, cart } = state;
-
   useEffect(() => {
     // already in global store
     if (products.length) {
       setCurrentProduct(products.find((product) => product._id === id));
       console.log(products);
     }
-
     // retrieved from server
     else if (data) {
       dispatch({
@@ -49,7 +50,6 @@ function Detail() {
       });
     }
   }, [products, data, loading, dispatch, id]);
-
   const addToCart = () => {
     const itemInCart = cart.find((cartItem) => cartItem._id === id);
     if (itemInCart) {
@@ -70,7 +70,6 @@ function Detail() {
       idbPromise("cart", "put", { ...currentProduct, purchaseQuantity: 1 });
     }
   };
-
   const removeFromCart = () => {
     dispatch({
       type: REMOVE_FROM_CART,
@@ -78,17 +77,6 @@ function Detail() {
     });
     idbPromise("cart", "delete", { ...currentProduct });
   };
-
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const handleOpenModal = () => {
-    setIsModalOpen(true);
-  };
-
-  const handleCloseModal = () => {
-    setIsModalOpen(false);
-  };
-
   return (
     <>
       {currentProduct && cart ? (
@@ -98,20 +86,38 @@ function Detail() {
           </Link>
           <div className="flex-row details-container">
             <div className="details-image">
-              <img src={`${currentProduct.image}`} alt={currentProduct.name} id="details-image"/>
+              <img
+                src={`${currentProduct.image}`}
+                alt={currentProduct.name}
+                id="details-image"
+              />
               {loading ? <img src={spinner} alt="loading" /> : null}
             </div>
             <div className="details-text">
               <h2>{currentProduct.name}</h2>
               <h4 id="price">${currentProduct.price} </h4>
               <p id="description">{currentProduct.description}</p>
-              <p id="watering"> Watering: {currentProduct.watering} </p>
-              <p id="sun"> Sun: {currentProduct.sun} </p>
-              <p id="hardiness_zone"> Hardiness Zone: {currentProduct.hardiness_zone} 
-              <button onClick={handleOpenModal}>Find Your Zone!</button></p>
-              <p id="maintenance"> Maintenance: {currentProduct.maintenance} </p>
-              <p id="care_level"> Care Level: {currentProduct.care_level} </p>
-              <p>
+              <p id="watering" className="details">
+                <WaterDropIcon style={{ color: "#0FA3B1" }} />
+                Watering: {currentProduct.watering}
+              </p>
+              <p id="sun" className="details">
+                <WbSunnyIcon style={{ color: "#F5CB5C" }} />
+                Sun: {currentProduct.sun}{" "}
+              </p>
+              <p id="hardiness_zone" className="details">
+                <MapIcon style={{ color: "#FF9B71" }} />
+                Hardiness Zone: {currentProduct.hardiness_zone}{" "}
+              </p>
+              <p id="maintenance" className="details">
+                <HourglassBottomIcon style={{ color: "#F9627D" }} />
+                Maintenance: {currentProduct.maintenance}{" "}
+              </p>
+              <p id="care_level" className="details">
+                <YardIcon style={{ color: "#AE76A6" }} />
+                Care Level: {currentProduct.care_level}{" "}
+              </p>
+              <p className="detailsBtn">
                 <button onClick={addToCart} className="addCartBtn">
                   Add to Cart
                 </button>
@@ -126,14 +132,15 @@ function Detail() {
             </div>
           </div>
         </div>
-        
       ) : null}
       <Cart />
-      <CustomModal isOpen={isModalOpen} onRequestClose={handleCloseModal} />
     </>
   );
 }
 export default Detail;
+
+
+
 
 
 

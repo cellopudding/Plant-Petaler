@@ -20,7 +20,7 @@ body {
 body {
   margin: 0;
   padding: 0;
-  font-family: "Karla", sans-serif;
+  font-family: "Rubik", sans-serif;
   font-weight: 400;
   line-height: 1.5;
   font-size: 16px;
@@ -34,14 +34,14 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Rubik", sans-serif;
-  font-weight: 500;
+  /* font-weight: 800; */
   margin: 5px 0;
   line-height: 1.25;
 }
 
 h1 {
   font-size: 2.25rem;
+  /* font-weight: bolder; */
 }
 
 h2 {
@@ -76,12 +76,13 @@ a {
 }
 
 header {
+  display: flex;
   background: var(--primary);
   /* position: fixed; */
   top: 0;
   width: 100%;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
+  align-items: flex-start;
   z-index: 2;
 }
 
@@ -100,6 +101,7 @@ button {
   margin: 0 1px;
   background-color: var(--primary);
   color: var(--light);
+  font-family: "Rubik", sans-serif;
 }
 
 button:hover {
@@ -111,16 +113,30 @@ button[disabled] {
   opacity: 0.7;
 }
 
+.detailsBtn {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.categories {
+  text-align: center;
+}
+
 .categoryBtn {
   background-color: #fff;
   color: var(--dark);
+  font-size: 1.3rem;
+}
+
+.categoryBtn:hover {
+  color: #3a6246;
 }
 
 .wrapper {
   position: relative;
 }
 
-/* need to fix */
 .image {
   max-width: 100%;
   object-fit: cover;
@@ -129,6 +145,8 @@ button[disabled] {
   opacity: 1;
   transition: 0.5s ease;
   backface-visibility: hidden;
+  /* box-shadow: 5px 5px 2px #ccc; */
+  /* border-radius: 1rem; */
 }
 
 .middle {
@@ -153,12 +171,15 @@ button[disabled] {
 .text {
   background-color: var(--primary);
   color: var(--light);
-  font-size: 16px;
+  font-size: 1.1rem;
   padding: 16px 60px;
+  font-weight: 400;
+  border-radius: 0.5rem;
 }
 
 span[role="img"] {
   cursor: default;
+  display: flex;
 }
 
 .green {
@@ -166,7 +187,10 @@ span[role="img"] {
 }
 
 form {
-  width: 40%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 input {
@@ -176,6 +200,7 @@ input {
   outline: none;
   border-radius: 3px;
   transition: box-shadow 0.2s;
+  width: 40%;
 }
 
 input:focus {
@@ -184,17 +209,16 @@ input:focus {
 }
 
 .container {
-  /* width: 85%; */
-  max-width: 1200px;
+  /* max-width: 1200px;
   margin-left: auto;
-  margin-right: auto;
+  margin-right: auto; */
+  width: 100%;
 }
 
 .flex-row {
   display: flex;
   flex-wrap: wrap;
   padding-left: 0px;
-  justify-content: space-between;
 }
 
 .space-between {
@@ -218,8 +242,6 @@ input:focus {
 .my-1 {
   margin-top: var(--spacing-one);
   margin-bottom: var(--spacing-one);
-  display: flex;
-  flex-direction: column;
 }
 
 .my-2 {
@@ -264,6 +286,7 @@ input:focus {
 
 .card-qty {
   align-items: center;
+  display: flex;
 }
 
 .error-text {
@@ -273,7 +296,7 @@ input:focus {
 .arrows {
   display: flex;
   align-items: center;
-  gap: 0.5arem;
+  margin-left: 20px;
 }
 
 ul {
@@ -302,6 +325,12 @@ ul {
   height: auto;
 }
 
+.details {
+  display: flex;
+  gap: 0.5rem;
+  padding-top: 5px;
+}
+
 #price {
   border-bottom: #c9ddff solid;
   padding-bottom: 0.75rem;
@@ -311,20 +340,24 @@ ul {
   padding-top: 0.5rem;
 }
 
-.background {
-  display: flex;
-  flex-direction: row;
-  gap: 2rem;
-  align-items: center;
-  justify-content: center;
-  margin-top: 4rem;
+.login-form {
+  text-align: center;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+@media screen and (max-width: 992px) {
+  .card {
+    width: 50%;
+  }
 }
 
 @media screen and (max-width: 768px) {
   .card {
     width: 100%;
   }
-  .details-container {
+  .details-container,
+  .arrows {
     flex-direction: column;
     margin-inline: 20px;
   }

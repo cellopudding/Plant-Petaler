@@ -7,6 +7,7 @@ import {
   createHttpLink,
 } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
+
 import Home from "./pages/Home";
 import Detail from "./pages/Detail";
 import NoMatch from "./pages/NoMatch";
@@ -19,6 +20,8 @@ import Success from "./pages/Success";
 import OrderHistory from "./pages/OrderHistory";
 import "animate.css";
 import "./index.css";
+import * as serviceWorker from './serviceWorker';
+
 
 const httpLink = createHttpLink({
   uri: "/graphql",
@@ -38,6 +41,21 @@ const client = new ApolloClient({
   link: authLink.concat(httpLink),
   cache: new InMemoryCache(),
 });
+
+//if ('serviceWorker' in navigator) {
+  //window.addEventListener('load', () => {
+    //navigator.serviceWorker.register('./serviceWorker.js')
+    serviceWorker.register()
+    /*
+      .then(registration => {
+        console.log('Service worker registered successfully:', registration);
+      })
+      .catch(error => {
+        console.error('Error registering service worker:', error);
+      });
+    */
+  //});
+//}
 
 function App() {
   return (

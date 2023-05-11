@@ -18,7 +18,11 @@ function Nav() {
           {/* // </div> */}
           {/* <div className="right">
             <div className="icons">
+
               <ul> */}
+          <li className="mx-1">
+            <Link to="/Install">Install</Link>
+          </li>
           <li className="mx-1">
             <Link to="/orderHistory">Order History</Link>
           </li>
@@ -37,6 +41,7 @@ function Nav() {
         //   </div>
         // </div>
         // </div>
+
       );
     } else {
       return (

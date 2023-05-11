@@ -2,23 +2,13 @@ import React from "react";
 import Auth from "../../utils/auth";
 import { Link } from "react-router-dom";
 import Cart from "../Cart/index";
-
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
-
-// import "./navbar.css";
 
 function Nav() {
   function showNavigation() {
     if (Auth.loggedIn()) {
       return (
-        // <div className="navbar">
-        //   <div className="left">
         <ul className="flex-row">
-          {/* </ul> */}
-          {/* // </div> */}
-          {/* <div className="right">
-            <div className="icons">
-              <ul> */}
           <li className="mx-1">
             <Link to="/orderHistory">Order History</Link>
           </li>
@@ -29,28 +19,16 @@ function Nav() {
             </a>
           </li>
         </ul>
-        //   </div>
-        // </div>
-        // </div>
       );
     } else {
       return (
-        // <div className="navbar">
-        //   <div className="left">
         <ul className="flex-row">
-          {/* </div>
-          <div className="right">
-            <div className="icons"> */}
-
           <li className="mx-1">
             <Link to="/login">
               <AccountCircleIcon />
             </Link>
           </li>
         </ul>
-        //     </div>
-        //   </div>
-        // </div>
       );
     }
   }

@@ -82,4 +82,8 @@
     position: relative;
     margin: 0 auto;
   }
+
+  .checkout {
+    border: solid 1px var(--light);
+  }
 }

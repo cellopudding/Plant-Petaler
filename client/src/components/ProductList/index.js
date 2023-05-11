@@ -7,8 +7,6 @@ import { QUERY_PRODUCTS } from "../../utils/queries";
 import { idbPromise } from "../../utils/helpers";
 import spinner from "../../assets/spinner.gif";
 
-// import "./product.css";
-
 function ProductList() {
   const [state, dispatch] = useStoreContext();
 

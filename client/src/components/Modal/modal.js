@@ -51,10 +51,21 @@ const CustomModal = ({ isOpen, onRequestClose }) => {
       {zoneResult && (
         <div className="zoneDisplay">
           <h3>Your Growing Zone:</h3>
-          <p><strong>Zone:</strong> {zoneResult.zone}</p>
-          <p><strong>Temp Range:</strong> {zoneResult.temperature_range}</p>
-          <p><strong>Lat:</strong> {zoneResult.coordinates.lat}</p>
-          <p><strong>Lon:</strong> {zoneResult.coordinates.lon}</p>
+          <p>
+            <strong>Zone:</strong>
+            {zoneResult.zone}
+          </p>
+          <p>
+            <strong>Temp Range:</strong> {zoneResult.temperature_range}
+          </p>
+          <p>
+            <strong>Lat:</strong>
+            {zoneResult.coordinates.lat}
+          </p>
+          <p>
+            <strong>Lon:</strong>
+            {zoneResult.coordinates.lon}
+          </p>
         </div>
       )}
       {errorMessage && <div className="error">{errorMessage}</div>}

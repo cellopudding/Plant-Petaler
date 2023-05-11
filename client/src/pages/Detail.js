@@ -18,6 +18,8 @@ import WbSunnyIcon from "@mui/icons-material/WbSunny";
 import HourglassBottomIcon from "@mui/icons-material/HourglassBottom";
 import YardIcon from "@mui/icons-material/Yard";
 import MapIcon from "@mui/icons-material/Map";
+import CustomModal from "../components/Modal/modal";
+
 function Detail() {
   const [state, dispatch] = useStoreContext();
   const { id } = useParams();
@@ -77,6 +79,13 @@ function Detail() {
     });
     idbPromise("cart", "delete", { ...currentProduct });
   };
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const handleOpenModal = () => {
+    setIsModalOpen(true);
+  };
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
   return (
     <>
       {currentProduct && cart ? (
@@ -108,6 +117,7 @@ function Detail() {
               <p id="hardiness_zone" className="details">
                 <MapIcon style={{ color: "#FF9B71" }} />
                 Hardiness Zone: {currentProduct.hardiness_zone}{" "}
+                <button onClick={handleOpenModal}>Find Your Zone!</button>
               </p>
               <p id="maintenance" className="details">
                 <HourglassBottomIcon style={{ color: "#F9627D" }} />
@@ -134,17 +144,8 @@ function Detail() {
         </div>
       ) : null}
       <Cart />
+      <CustomModal isOpen={isModalOpen} onRequestClose={handleCloseModal} />
     </>
   );
 }
 export default Detail;
-
-
-
-
-
-
-
-
-
-

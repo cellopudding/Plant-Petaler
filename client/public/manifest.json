@@ -1,7 +1,14 @@
 {
+  "icons": [
+    {
+      "src": "./logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
   "name": "Plant Shop",
   "short_name": "Plant Shop",
-  "start_url": ".",
+  "start_url": "/Install",
   "display": "standalone",
   "description": "Shop for plants from the comfort of your garden!",
   "theme_color": "#000000",

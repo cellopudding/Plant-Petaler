@@ -18,7 +18,6 @@ import WbSunnyIcon from "@mui/icons-material/WbSunny";
 import HourglassBottomIcon from "@mui/icons-material/HourglassBottom";
 import YardIcon from "@mui/icons-material/Yard";
 import MapIcon from "@mui/icons-material/Map";
-
 function Detail() {
   const [state, dispatch] = useStoreContext();
   const { id } = useParams();
@@ -31,7 +30,6 @@ function Detail() {
       setCurrentProduct(products.find((product) => product._id === id));
       console.log(products);
     }
-
     // retrieved from server
     else if (data) {
       dispatch({
@@ -100,23 +98,23 @@ function Detail() {
               <h4 id="price">${currentProduct.price} </h4>
               <p id="description">{currentProduct.description}</p>
               <p id="watering" className="details">
-                <WaterDropIcon style={{ color: "#0fa3b1" }} />
+                <WaterDropIcon style={{ color: "#0FA3B1" }} />
                 Watering: {currentProduct.watering}
               </p>
               <p id="sun" className="details">
-                <WbSunnyIcon style={{ color: "#f5cb5c" }} />
+                <WbSunnyIcon style={{ color: "#F5CB5C" }} />
                 Sun: {currentProduct.sun}{" "}
               </p>
               <p id="hardiness_zone" className="details">
-                <MapIcon style={{ color: "#ff9b71" }} />
+                <MapIcon style={{ color: "#FF9B71" }} />
                 Hardiness Zone: {currentProduct.hardiness_zone}{" "}
               </p>
               <p id="maintenance" className="details">
-                <HourglassBottomIcon style={{ color: "#f9627d" }} />
+                <HourglassBottomIcon style={{ color: "#F9627D" }} />
                 Maintenance: {currentProduct.maintenance}{" "}
               </p>
               <p id="care_level" className="details">
-                <YardIcon style={{ color: "#ae76a6" }} />
+                <YardIcon style={{ color: "#AE76A6" }} />
                 Care Level: {currentProduct.care_level}{" "}
               </p>
               <p className="detailsBtn">
@@ -140,3 +138,13 @@ function Detail() {
   );
 }
 export default Detail;
+
+
+
+
+
+
+
+
+
+

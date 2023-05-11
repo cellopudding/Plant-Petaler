@@ -3,7 +3,6 @@ import Auth from "../../utils/auth";
 import { Link } from "react-router-dom";
 import Cart from "../Cart/index";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
-
 function Nav() {
   function showNavigation() {
     if (Auth.loggedIn()) {
@@ -44,5 +43,14 @@ function Nav() {
     </header>
   );
 }
-
 export default Nav;
+
+
+
+
+
+
+
+
+
+

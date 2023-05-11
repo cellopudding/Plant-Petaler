@@ -64,8 +64,10 @@ function Nav() {
       <h1 className="app-name">
         <Link to="/">Plant Shop</Link>
       </h1>
-      <nav>{showNavigation()}</nav>
-      <Cart />
+      <div className="flex-row">
+        <nav>{showNavigation()}</nav>
+        <Cart />
+      </div>
     </header>
   );
 }

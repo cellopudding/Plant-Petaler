@@ -193,6 +193,8 @@ input:focus {
 .flex-row {
   display: flex;
   flex-wrap: wrap;
+  padding-left: 0px;
+  justify-content: space-between;
 }
 
 .space-between {

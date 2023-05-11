@@ -14,6 +14,21 @@ const productSchema = new Schema({
   image: {
     type: String
   },
+  watering: {
+    type: String
+  },
+  hardiness_zone: {
+    type: String
+  },
+  sun: {
+    type: String
+  },
+  maintenance: {
+    type: String
+  },
+  care_level: {
+    type: String
+  },
   price: {
     type: Number,
     required: true,

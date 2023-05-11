@@ -11,6 +11,11 @@ const typeDefs = gql`
     name: String
     description: String
     image: String
+    watering: String
+    hardiness_zone: String
+    sun: String
+    maintenance: String
+    care_level: String
     quantity: Int
     price: Float
     category: Category

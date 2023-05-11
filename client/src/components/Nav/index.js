@@ -20,6 +20,9 @@ function Nav() {
           <div className="right">
             <div className="icons">
               <ul>
+              <li>
+              <Link to="/Install">Install</Link>
+                </li>
                 <li>
                   <Link to="/orderHistory">Order History</Link>
                 </li>

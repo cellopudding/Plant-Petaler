@@ -1,4 +1,3 @@
-import ".";
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import {
@@ -8,18 +7,21 @@ import {
   createHttpLink,
 } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
-import Home from './pages/Home';
-import Detail from './pages/Detail';
-import NoMatch from './pages/NoMatch';
-import Login from './pages/Login';
-import Signup from './pages/Signup';
-import Nav from './components/Nav';
-import Footer from './components/Footer';
-import { StoreProvider } from './utils/GlobalState';
-import Success from './pages/Success';
-import OrderHistory from './pages/OrderHistory';
-import 'animate.css';
+
+import Home from "./pages/Home";
+import Detail from "./pages/Detail";
+import NoMatch from "./pages/NoMatch";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
+import Nav from "./components/Nav";
+import Footer from "./components/Footer";
+import { StoreProvider } from "./utils/GlobalState";
+import Success from "./pages/Success";
+import OrderHistory from "./pages/OrderHistory";
+import "animate.css";
+import "./index.css";
 import * as serviceWorker from './serviceWorker';
+
 
 const httpLink = createHttpLink({
   uri: "/graphql",

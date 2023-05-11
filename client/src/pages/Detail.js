@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { useQuery } from "@apollo/client";
-
 import Cart from "../components/Cart";
 import { useStoreContext } from "../utils/GlobalState";
 import {
@@ -13,29 +12,26 @@ import {
 import { QUERY_PRODUCTS } from "../utils/queries";
 import { idbPromise } from "../utils/helpers";
 import spinner from "../assets/spinner.gif";
-
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 function Detail() {
   const [state, dispatch] = useStoreContext();
   const { id } = useParams();
-
   const [currentProduct, setCurrentProduct] = useState({});
-
   const { loading, data } = useQuery(QUERY_PRODUCTS);
-
   const { products, cart } = state;
-
   useEffect(() => {
     // already in global store
     if (products.length) {
       setCurrentProduct(products.find((product) => product._id === id));
-    }
+      console.log(products)
+    } 
+
     // retrieved from server
     else if (data) {
       dispatch({
         type: UPDATE_PRODUCTS,
         products: data.products,
       });
-
       data.products.forEach((product) => {
         idbPromise("products", "put", product);
       });
@@ -50,7 +46,6 @@ function Detail() {
       });
     }
   }, [products, data, loading, dispatch, id]);
-
   const addToCart = () => {
     const itemInCart = cart.find((cartItem) => cartItem._id === id);
     if (itemInCart) {
@@ -71,52 +66,59 @@ function Detail() {
       idbPromise("cart", "put", { ...currentProduct, purchaseQuantity: 1 });
     }
   };
-
   const removeFromCart = () => {
     dispatch({
       type: REMOVE_FROM_CART,
       _id: currentProduct._id,
     });
-
     idbPromise("cart", "delete", { ...currentProduct });
   };
-
   return (
     <>
       {currentProduct && cart ? (
         <div className="container my-1">
-          <Link to="/" className="back">
-            ← Back to Products
+          <Link to="/" className="my-2 arrows">
+            <ArrowBackIcon /> Back to Plants
           </Link>
-
-          <h2>{currentProduct.name}</h2>
-
-          <p>{currentProduct.description}</p>
-
-          <p>
-            <strong>Price:</strong>${currentProduct.price}{" "}
-            <button onClick={addToCart} className="addCartBtn">
-              Add to Cart
-            </button>
-            <button
-              disabled={!cart.find((p) => p._id === currentProduct._id)}
-              onClick={removeFromCart}
-              className="addCartBtn"
-            >
-              Remove from Cart
-            </button>
-          </p>
-
-          <img
-            src={`${currentProduct.image}`}
-            alt={currentProduct.name}
-          />
+          <div className="flex-row details-container">
+            <div className="details-image">
+              <img src={`${currentProduct.image}`} alt={currentProduct.name} id="details-image"/>
+              {loading ? <img src={spinner} alt="loading" /> : null}
+            </div>
+            <div className="details-text">
+              <h2>{currentProduct.name}</h2>
+              <h4 id="price">${currentProduct.price} </h4>
+              <p id="description">{currentProduct.description}</p>
+              <p id="watering"> Watering: {currentProduct.watering} </p>
+              <p id="sun"> Sun: {currentProduct.sun} </p>
+              <p id="hardiness_zone"> Hardiness Zone: {currentProduct.hardiness_zone} </p>
+              <p id="maintenance"> Maintenance: {currentProduct.maintenance} </p>
+              <p id="care_level"> Care Level: {currentProduct.care_level} </p>
+              <p>
+                <button onClick={addToCart} className="addCartBtn">
+                  Add to Cart
+                </button>
+                <button
+                  disabled={!cart.find((p) => p._id === currentProduct._id)}
+                  onClick={removeFromCart}
+                  className="addCartBtn"
+                >
+                  Remove from Cart
+                </button>
+              </p>
+            </div>
+          </div>
         </div>
       ) : null}
-      {loading ? <img src={spinner} alt="loading" /> : null}
       <Cart />
     </>
   );
 }
-
 export default Detail;
+
+
+
+
+
+
+

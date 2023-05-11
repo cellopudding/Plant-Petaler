@@ -20,6 +20,8 @@ export const reducer = (state, action) => {
       };
 
     case ADD_TO_CART:
+      console.log("in cart");
+      console.log(action);
       return {
         ...state,
         cartOpen: true,

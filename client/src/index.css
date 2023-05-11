@@ -329,6 +329,7 @@ ul {
   display: flex;
   gap: 0.5rem;
   padding-top: 5px;
+  align-items: center;
 }
 
 #price {

@@ -42,20 +42,7 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 });
 
-//if ('serviceWorker' in navigator) {
-  //window.addEventListener('load', () => {
-    //navigator.serviceWorker.register('./serviceWorker.js')
-    serviceWorker.register()
-    /*
-      .then(registration => {
-        console.log('Service worker registered successfully:', registration);
-      })
-      .catch(error => {
-        console.error('Error registering service worker:', error);
-      });
-    */
-  //});
-//}
+serviceWorker.register()
 
 function App() {
   return (

@@ -47,7 +47,11 @@ function OrderHistory() {
               </div>
             ))}
           </>
-        ) : null}
+        ) : 
+<div>
+  <p>You don't have any previous orders yet.</p>
+</div>
+        }
       </div>
     </>
   );

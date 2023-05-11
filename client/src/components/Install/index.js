@@ -1,14 +1,12 @@
 import React, { useEffect, useState } from "react";
 
 const Install = () => {
-  const [supportsPWA, setSupportsPWA] = useState(false);
   const [promptInstall, setPromptInstall] = useState(null);
 
   useEffect(() => {
     const handler = e => {
+      console.log("beforeinstallprompt event fired");
       e.preventDefault();
-      console.log("we are being triggered :D");
-      setSupportsPWA(true);
       setPromptInstall(e);
     };
     window.addEventListener("beforeinstallprompt", handler);
@@ -19,13 +17,15 @@ const Install = () => {
   const onClick = evt => {
     evt.preventDefault();
     if (!promptInstall) {
+      const isAppInstalled = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone;
+      if (isAppInstalled) {
+        window.location.href = '/';
+      }
       return;
     }
     promptInstall.prompt();
   };
-  if (!supportsPWA) {
-    return null;
-  }
+
   return (
     <button
       className="link-button"

@@ -57,6 +57,13 @@ function ProductList() {
               name={product.name}
               price={product.price}
               quantity={product.quantity}
+              watering={product.watering}
+              hardiness_zone={product.hardiness_zone}
+              sun={product.sun}
+              maintenance={product.maintenance}
+              care_level={product.care_level}
+              
+
             
             />
           ))}

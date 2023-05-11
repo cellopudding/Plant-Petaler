@@ -23,7 +23,9 @@ function Detail() {
     // already in global store
     if (products.length) {
       setCurrentProduct(products.find((product) => product._id === id));
-    }
+      console.log(products)
+    } 
+
     // retrieved from server
     else if (data) {
       dispatch({
@@ -87,6 +89,11 @@ function Detail() {
               <h2>{currentProduct.name}</h2>
               <h4 id="price">${currentProduct.price} </h4>
               <p id="description">{currentProduct.description}</p>
+              <p id="watering"> Watering: {currentProduct.watering} </p>
+              <p id="sun"> Sun: {currentProduct.sun} </p>
+              <p id="hardiness_zone"> Hardiness Zone: {currentProduct.hardiness_zone} </p>
+              <p id="maintenance"> Maintenance: {currentProduct.maintenance} </p>
+              <p id="care_level"> Care Level: {currentProduct.care_level} </p>
               <p>
                 <button onClick={addToCart} className="addCartBtn">
                   Add to Cart

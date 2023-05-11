@@ -2,8 +2,8 @@ import React from "react";
 import Auth from "../../utils/auth";
 import { Link } from "react-router-dom";
 import Cart from "../Cart/index";
+import CategoryMenu from "../CategoryMenu/index";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
-import FavoriteIcon from "@mui/icons-material/Favorite";
 
 // import "./navbar.css";
 
@@ -21,11 +21,6 @@ function Nav() {
               <ul> */}
           <li className="mx-1">
             <Link to="/orderHistory">Order History</Link>
-          </li>
-          <li className="mx-1">
-            <Link to="/cart">
-              <FavoriteIcon />
-            </Link>
           </li>
           <li className="mx-1">
             {/* this is not using the Link component to logout or user and then refresh the application to the start */}
@@ -64,6 +59,7 @@ function Nav() {
       <h1 className="app-name">
         <Link to="/">Plant Shop</Link>
       </h1>
+      <CategoryMenu />
       <div className="flex-row">
         <nav>{showNavigation()}</nav>
         <Cart />

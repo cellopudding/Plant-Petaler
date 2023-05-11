@@ -13,6 +13,12 @@ import { QUERY_PRODUCTS } from "../utils/queries";
 import { idbPromise } from "../utils/helpers";
 import spinner from "../assets/spinner.gif";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import WaterDropIcon from "@mui/icons-material/WaterDrop";
+import WbSunnyIcon from "@mui/icons-material/WbSunny";
+import HourglassBottomIcon from "@mui/icons-material/HourglassBottom";
+import YardIcon from "@mui/icons-material/Yard";
+import MapIcon from "@mui/icons-material/Map";
+
 function Detail() {
   const [state, dispatch] = useStoreContext();
   const { id } = useParams();
@@ -23,8 +29,8 @@ function Detail() {
     // already in global store
     if (products.length) {
       setCurrentProduct(products.find((product) => product._id === id));
-      console.log(products)
-    } 
+      console.log(products);
+    }
 
     // retrieved from server
     else if (data) {
@@ -82,18 +88,37 @@ function Detail() {
           </Link>
           <div className="flex-row details-container">
             <div className="details-image">
-              <img src={`${currentProduct.image}`} alt={currentProduct.name} id="details-image"/>
+              <img
+                src={`${currentProduct.image}`}
+                alt={currentProduct.name}
+                id="details-image"
+              />
               {loading ? <img src={spinner} alt="loading" /> : null}
             </div>
             <div className="details-text">
               <h2>{currentProduct.name}</h2>
               <h4 id="price">${currentProduct.price} </h4>
               <p id="description">{currentProduct.description}</p>
-              <p id="watering"> Watering: {currentProduct.watering} </p>
-              <p id="sun"> Sun: {currentProduct.sun} </p>
-              <p id="hardiness_zone"> Hardiness Zone: {currentProduct.hardiness_zone} </p>
-              <p id="maintenance"> Maintenance: {currentProduct.maintenance} </p>
-              <p id="care_level"> Care Level: {currentProduct.care_level} </p>
+              <p id="watering">
+                <WaterDropIcon style={{ color: "#0fa3b1" }} />
+                Watering: {currentProduct.watering}
+              </p>
+              <p id="sun">
+                <WbSunnyIcon style={{ color: "#f5cb5c" }} />
+                Sun: {currentProduct.sun}{" "}
+              </p>
+              <p id="hardiness_zone">
+                <MapIcon style={{ color: "#333131" }} />
+                Hardiness Zone: {currentProduct.hardiness_zone}{" "}
+              </p>
+              <p id="maintenance">
+                <HourglassBottomIcon style={{ color: "#f9627d" }} />
+                Maintenance: {currentProduct.maintenance}{" "}
+              </p>
+              <p id="care_level">
+                <YardIcon style={{ color: "#ae76a6" }} />
+                Care Level: {currentProduct.care_level}{" "}
+              </p>
               <p>
                 <button onClick={addToCart} className="addCartBtn">
                   Add to Cart
@@ -115,10 +140,3 @@ function Detail() {
   );
 }
 export default Detail;
-
-
-
-
-
-
-

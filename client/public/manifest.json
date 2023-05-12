@@ -6,8 +6,8 @@
       "type": "image/png"
     }
   ],
-  "name": "Plant Shop",
-  "short_name": "Plant Shop",
+  "name": "Plant Petaler",
+  "short_name": "Plant Petaler",
   "start_url": "/Install",
   "display": "standalone",
   "description": "Shop for plants from the comfort of your garden!",

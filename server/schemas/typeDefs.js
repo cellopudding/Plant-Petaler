@@ -20,12 +20,6 @@ const typeDefs = gql`
     price: Float
     category: Category
   }
-  
-  type Quantity {
-    total: Int
-    sold: Int
-    available: Int
-  }
 
   type Order {
     _id: ID

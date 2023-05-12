@@ -17,7 +17,7 @@ module.exports = () => {
     plugins: [
       new HtmlWebpackPlugin({
       template: './index.html',
-      title: 'Plant Shop'
+      title: 'Plant Petaler'
     }),
 
     new InjectManifest({
@@ -29,8 +29,8 @@ module.exports = () => {
     new WebpackPwaManifest({
       fingerprints: false,
       inject: true,
-      name: 'Plant Shop',
-      short_name: 'Plant Shop',
+      name: 'Plant Petaler',
+      short_name: 'Plant Petaler',
       description: 'Shop for plants from the comfort of your garden!',
       background_color: '#000000',
       theme_color: '#ffffff',

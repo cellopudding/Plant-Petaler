@@ -55,7 +55,6 @@ const Cart = () => {
       for (let i = 0; i < item.purchaseQuantity; i++) {
         productIds.push(item._id);
       }
-      console.log("success");
     });
 
     getCheckout({
@@ -81,7 +80,6 @@ const Cart = () => {
       <h2>Shopping Cart</h2>
       {state.cart.length ? (
         <div>
-          {console.log(state.cart)}
           {state.cart.map((item) => (
             <CartItem key={item._id} item={item} />
           ))}

@@ -1,19 +1,14 @@
 import React, { useEffect, useState } from "react";
-
 const Install = () => {
   const [promptInstall, setPromptInstall] = useState(null);
-
   useEffect(() => {
     const handler = e => {
-      console.log("beforeinstallprompt event fired");
       e.preventDefault();
       setPromptInstall(e);
     };
     window.addEventListener("beforeinstallprompt", handler);
-
     return () => window.removeEventListener("transitionend", handler);
   }, []);
-
   const onClick = evt => {
     evt.preventDefault();
     if (!promptInstall) {
@@ -25,7 +20,6 @@ const Install = () => {
     }
     promptInstall.prompt();
   };
-
   return (
     <button
       className="link-button"
@@ -38,5 +32,4 @@ const Install = () => {
     </button>
   );
 };
-
 export default Install;

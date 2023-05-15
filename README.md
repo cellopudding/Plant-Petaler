@@ -1,7 +1,7 @@
 # Plant-Petaler
 
 ## Description
-We built a scalable, user-focused MERN app that enables plant lovers to shop online for indoor and plants. We combined a scalable MongoDB back end, a GraphQL API, and an Express.js and Node.js server with a React front end, implementing user authentication with JWT to build a user-focused platform. In addition, we integrated the Stripe payment platform for a safe and easy checkout experience. 
+We built a scalable, user-focused MERN app that enables plant lovers to shop online for indoor and outdoor plants. We combined a scalable MongoDB back end, a GraphQL API, and an Express.js and Node.js server with a React front end, implementing user authentication with JWT to build a user-focused platform. In addition, we integrated the Stripe payment platform for a safe and easy checkout experience. 
 
 ![Picture of the application](./client/src/assets/plant-petaler.png)
 

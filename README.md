@@ -19,7 +19,7 @@ npm install
 npm start
 
 ## Usage
-As a plant lover, I want to be able to shop for plants online so that I can shop a wider variety of plants on the schedule that works for me and have my plants shipped to my doorstep.<br>
+Once the application is invoked, the user is presented with the entire inventory on the home page. At the top of the page underneath the header lies a menu which gives the user the option to display indoor or outdoor plants. The user can click each plant to display a details page showing information about that plant. The header of the page offers a signup/login icon which gives access to each of those forms as well as a shopping cart icon to view plants ready to be purchased. The footer of the page contains icons for social media following as well as the main technologies used which link to each technologies' homepage for further information.<br>
 This application is being hosted on [Heroku](https://plant-petaler.herokuapp.com/).<br>
 
 ## Contributing

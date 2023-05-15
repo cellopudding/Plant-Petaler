@@ -361,6 +361,10 @@ ul {
   height: 100vh;
 }
 
+.grow-zone {
+  margin-right: 2px;
+}
+
 @media screen and (max-width: 992px) {
   .card {
     width: 50%;

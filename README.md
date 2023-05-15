@@ -19,7 +19,8 @@ npm install
 npm start
 
 ## Usage
-As a plant lover, I want to be able to shop for plants online so that I can shop a wider variety of plants on the schedule that works for me and have my plants shipped to my doorstep.
+As a plant lover, I want to be able to shop for plants online so that I can shop a wider variety of plants on the schedule that works for me and have my plants shipped to my doorstep.<br>
+This application is being hosted on [Heroku](https://plant-petaler.herokuapp.com/).<br>
 
 ## Contributing
 Thank you for your interest in our project. We are excited to see your contributions. Please follow the [Contributor Covenant](https://www.contributor-covenant.org/).

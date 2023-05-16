@@ -26,7 +26,7 @@ db.once("open", async () => {
       maintenance: "n/a",
       care_level: "Medium",
       category: categories[1]._id,
-      price: 35.99,
+      price: 35,
       quantity: 500,
     },
     {
@@ -41,7 +41,7 @@ db.once("open", async () => {
       maintenance: "n/a",
       care_level: "Medium",
       category: categories[1]._id,
-      price: 16.99,
+      price: 16,
       quantity: 500,
     },
     {
@@ -56,7 +56,7 @@ db.once("open", async () => {
       maintenance: "Low",
       care_level: "Medium",
       category: categories[1]._id,
-      price: 7.99,
+      price: 7,
       quantity: 20,
     },
     {
@@ -71,7 +71,7 @@ db.once("open", async () => {
       maintenance: "n/a",
       care_level: "Medium",
       category: categories[1]._id,
-      price: 99.99,
+      price: 99,
       quantity: 25,
     },
     {
@@ -86,7 +86,7 @@ db.once("open", async () => {
       maintenance: "Moderate",
       care_level: "Moderate",
       category: categories[1]._id,
-      price: 79.99,
+      price: 79,
       quantity: 60,
     },
     {
@@ -101,7 +101,7 @@ db.once("open", async () => {
       maintenance: "Low",
       care_level: "n/a",
       category: categories[1]._id,
-      price: 49.99,
+      price: 49,
       quantity: 4,
     },
     {
@@ -116,7 +116,7 @@ db.once("open", async () => {
       maintenance: "Low",
       care_level: "Medium",
       category: categories[1]._id,
-      price: 26.99,
+      price: 26,
       quantity: 100,
     },
     {
@@ -131,7 +131,7 @@ db.once("open", async () => {
       maintenance: "Moderate",
       care_level: "Medium",
       category: categories[1]._id,
-      price: 29.99,
+      price: 29,
       quantity: 40,
     },
     {
@@ -146,7 +146,7 @@ db.once("open", async () => {
       maintenance: "Low",
       care_level: "Medium",
       category: categories[1]._id,
-      price: 46.99,
+      price: 46,
       quantity: 50,
     },
     {
@@ -161,7 +161,7 @@ db.once("open", async () => {
       maintenance: "Moderate",
       care_level: "Medium",
       category: categories[1]._id,
-      price: 24.99,
+      price: 24,
       quantity: 40,
     },
 
@@ -177,7 +177,7 @@ db.once("open", async () => {
       maintenance: "n/a",
       care_level: "Medium",
       category: categories[0]._id,
-      price: 17.99,
+      price: 17,
       quantity: 20,
     },
     {
@@ -192,7 +192,7 @@ db.once("open", async () => {
       maintenance: "Moderate",
       care_level: "Moderate",
       category: categories[0]._id,
-      price: 16.99,
+      price: 16,
       quantity: 10,
     },
     {
@@ -207,7 +207,7 @@ db.once("open", async () => {
       maintenance: "Moderate",
       care_level: "Medium",
       category: categories[0]._id,
-      price: 45.99,
+      price: 45,
       quantity: 34,
     },
     {
@@ -222,7 +222,7 @@ db.once("open", async () => {
       maintenance: "Moderate",
       care_level: "High",
       category: categories[0]._id,
-      price: 12.99,
+      price: 12,
       quantity: 150,
     },
     {
@@ -237,7 +237,7 @@ db.once("open", async () => {
       maintenance: "High",
       care_level: "Medium",
       category: categories[0]._id,
-      price: 9.99,
+      price: 9,
       quantity: 60,
     },
     {
@@ -252,7 +252,7 @@ db.once("open", async () => {
       maintenance: "Low",
       care_level: "Medium",
       category: categories[0]._id,
-      price: 15.99,
+      price: 15,
       quantity: 35,
     },
     {
@@ -267,7 +267,7 @@ db.once("open", async () => {
       maintenance: "Moderate",
       care_level: "Moderate",
       category: categories[0]._id,
-      price: 32.99,
+      price: 32,
       quantity: 46,
     },
     {
@@ -282,7 +282,7 @@ db.once("open", async () => {
       maintenance: "High",
       care_level: "High",
       category: categories[0]._id,
-      price: 15.99,
+      price: 15,
       quantity: 99,
     },
     {
@@ -297,7 +297,7 @@ db.once("open", async () => {
       maintenance: "Moderate",
       care_level: "Medium",
       category: categories[0]._id,
-      price: 24.99,
+      price: 24,
       quantity: 60,
     },
     {
@@ -312,7 +312,7 @@ db.once("open", async () => {
       maintenance: "Low",
       care_level: "Medium",
       category: categories[0]._id,
-      price: 19.99,
+      price: 19,
       quantity: 70,
     },
   ]);
